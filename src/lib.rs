@@ -49,13 +49,13 @@ mod scalar;
 pub use scalar::Scalar;
 
 #[cfg(feature = "groups")]
-mod fp;
+pub mod fp;
 #[cfg(feature = "groups")]
-mod fp2;
+pub mod fp2;
 #[cfg(feature = "groups")]
-mod g1;
+pub mod g1;
 #[cfg(feature = "groups")]
-mod g2;
+pub mod g2;
 
 #[cfg(feature = "groups")]
 pub use g1::{G1Affine, G1Projective};
@@ -63,18 +63,18 @@ pub use g1::{G1Affine, G1Projective};
 pub use g2::{G2Affine, G2Projective};
 
 #[cfg(feature = "groups")]
-mod fp12;
+pub mod fp12;
 #[cfg(feature = "groups")]
-mod fp6;
+pub mod fp6;
 
 // The BLS parameter x for BLS12-381 is -0xd201000000010000
 #[cfg(feature = "groups")]
-const BLS_X: u64 = 0xd201_0000_0001_0000;
+pub const BLS_X: u64 = 0xd201_0000_0001_0000;
 #[cfg(feature = "groups")]
-const BLS_X_IS_NEGATIVE: bool = true;
+pub const BLS_X_IS_NEGATIVE: bool = true;
 
 #[cfg(feature = "pairings")]
-mod pairings;
+pub mod pairings;
 
 #[cfg(feature = "pairings")]
 pub use pairings::{pairing, Bls12, Gt, MillerLoopResult};
